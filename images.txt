@@ -6,3 +6,4 @@ jeessy/ddns-go
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 --platform=linux/arm64 stilleshan/dujiaoka
+--platform=linux/arm64 cloudnas/clouddrive2
