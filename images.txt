@@ -4,6 +4,7 @@ cloudnas/clouddrive2:0.8.5
 xhofe/alist:latest
 jeessy/ddns-go
 monokal/tinyproxy
+vscodev/alipan-tv-auth
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 --platform=linux/arm64 stilleshan/dujiaoka
