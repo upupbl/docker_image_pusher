@@ -2,7 +2,6 @@
 #支持私库
 cloudnas/clouddrive2:0.8.5
 xhofe/alist:latest
-jeessy/ddns-go
 monokal/tinyproxy
 vscodev/alipan-tv-auth
 sspreitzer/shellinabox
@@ -12,4 +11,4 @@ wwfnle/lucky
 --platform=linux/arm64 stilleshan/dujiaoka
 --platform=linux/arm64 cloudnas/clouddrive2
 #--platform=linux/arm32v7 cloudnas/clouddrive2
-#--platform=linux/arm32 cloudnas/clouddrive2
+--platform=linux/arm32v8 jeessy/ddns-go
