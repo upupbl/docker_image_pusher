@@ -6,6 +6,7 @@ jeessy/ddns-go
 monokal/tinyproxy
 vscodev/alipan-tv-auth
 sspreitzer/shellinabox
+wwfnle/lucky
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 --platform=linux/arm64 stilleshan/dujiaoka
