@@ -1,2 +1,2 @@
-cloudnas/clouddrive2 --platform=linux/amd64
-cloudnas/clouddrive2 --platform=linux/arm64
+--platform=linux/amd64 cloudnas/clouddrive2
+--platform=linux/arm64 cloudnas/clouddrive2
