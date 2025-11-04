@@ -1,2 +1,20 @@
+emby/embyserver:latest
+amilys/embyserver_arm64v8
+emby/embyserver_arm64v8:latest
+
+
 --platform=linux/amd64 cloudnas/clouddrive2
 --platform=linux/arm64 cloudnas/clouddrive2
+
+--platform=linux/amd64 jxxghp/moviepilot-v2
+--platform=linux/arm64 jxxghp/moviepilot-v2
+
+--platform=linux/amd64 linuxserver/qbittorrent:5.1.0
+--platform=linux/arm64 linuxserver/qbittorrent:5.1.0
+
+--platform=linux/amd64 easychen/cookiecloud
+--platform=linux/arm64 easychen/cookiecloud
+
+--platform=linux/amd64 cloudnas/clouddrive2
+--platform=linux/arm64 cloudnas/clouddrive2
+
