@@ -21,4 +21,6 @@ emby/embyserver_arm64v8:latest
 --platform=linux/amd64 taygetus/npc
 --platform=linux/arm64 taygetus/npc
 
+--platform=linux/amd64 mzz2017/v2raya
+--platform=linux/arm64 mzz2017/v2raya
 
