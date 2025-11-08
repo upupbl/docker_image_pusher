@@ -29,3 +29,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 allanpk716/chinesesubfinder
 --platform=linux/arm64 allanpk716/chinesesubfinder
+
+--platform=linux/amd64 cloudflare/cloudflared
+--platform=linux/arm64 cloudflare/cloudflared
