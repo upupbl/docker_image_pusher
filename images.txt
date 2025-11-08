@@ -27,3 +27,5 @@ emby/embyserver_arm64v8:latest
 --platform=linux/amd64 jeessy/ddns-go
 --platform=linux/arm64 jeessy/ddns-go
 
+--platform=linux/amd64 allanpk716/chinesesubfinder
+--platform=linux/arm64 allanpk716/chinesesubfinder
