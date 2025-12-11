@@ -35,3 +35,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 openlistteam/openlist
 --platform=linux/arm64 openlistteam/openlist
+
+--platform=linux/amd64 alist666/alist
+--platform=linux/arm64 alist666/alist
