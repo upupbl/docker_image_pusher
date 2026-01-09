@@ -41,3 +41,9 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 ddsderek/xiaoyakeeper
 --platform=linux/arm64 ddsderek/xiaoyakeeper
+
+--platform=linux/amd64 iyuucn/iyuuplus
+--platform=linux/arm64 iyuucn/iyuuplus
+
+--platform=linux/amd64 hslr/sun-panel
+--platform=linux/arm64 hslr/sun-panel
