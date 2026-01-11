@@ -33,11 +33,8 @@ linuxserver/qbittorrent:5.1.0
 --platform=linux/amd64 cloudflare/cloudflared
 --platform=linux/arm64 cloudflare/cloudflared
 
---platform=linux/amd64 openlistteam/openlist
---platform=linux/arm64 openlistteam/openlist
-
---platform=linux/amd64 alist666/alist
---platform=linux/arm64 alist666/alist
+--platform=linux/amd64 xhofe/alist
+--platform=linux/arm64 xhofe/alist
 
 --platform=linux/amd64 ddsderek/xiaoyakeeper
 --platform=linux/arm64 ddsderek/xiaoyakeeper
