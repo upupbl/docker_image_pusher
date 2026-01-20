@@ -47,3 +47,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 linuxserver/emby
 --platform=linux/arm64 linuxserver/emby
+
+--platform=linux/amd64 homeassistant/home-assistant
+--platform=linux/arm64 homeassistant/home-assistant
