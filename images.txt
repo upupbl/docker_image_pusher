@@ -50,3 +50,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 homeassistant/home-assistant
 --platform=linux/arm64 homeassistant/home-assistant
+
+--platform=linux/amd64 tsl0922/ttyd:latest
+--platform=linux/arm64 tsl0922/ttyd:latest
