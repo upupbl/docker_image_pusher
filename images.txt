@@ -56,3 +56,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 adguard/adguardhome:latest
 --platform=linux/arm64 adguard/adguardhome:latest
+
+--platform=linux/amd64 linuxserver/calibre-web:latest
+--platform=linux/arm64 linuxserver/calibre-web:latest
