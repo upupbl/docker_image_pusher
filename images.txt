@@ -59,3 +59,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 linuxserver/calibre-web:latest
 --platform=linux/arm64 linuxserver/calibre-web:latest
+
+--platform=linux/amd64 linuxserver/mods:universal-calibre
+--platform=linux/arm64 linuxserver/mods:universal-calibre
