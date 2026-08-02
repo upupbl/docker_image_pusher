@@ -81,3 +81,7 @@ linuxserver/qbittorrent:5.1.0
 # Immich PostgreSQL
 --platform=linux/amd64 ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
 --platform=linux/arm64 ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
+
+
+--platform=linux/amd64 syncthing/syncthing:latest
+--platform=linux/arm64 syncthing/syncthing:latest
