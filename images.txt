@@ -65,3 +65,19 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 deluan/navidrome:latest
 --platform=linux/arm64 deluan/navidrome:latest
+
+# Immich Server
+--platform=linux/amd64 ghcr.io/immich-app/immich-server:release
+--platform=linux/arm64 ghcr.io/immich-app/immich-server:release
+
+# Immich Machine Learning
+--platform=linux/amd64 ghcr.io/immich-app/immich-machine-learning:release
+--platform=linux/arm64 ghcr.io/immich-app/immich-machine-learning:release
+
+# Valkey
+--platform=linux/amd64 docker.io/valkey/valkey:9
+--platform=linux/arm64 docker.io/valkey/valkey:9
+
+# Immich PostgreSQL
+--platform=linux/amd64 ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
+--platform=linux/arm64 ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
