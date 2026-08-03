@@ -85,3 +85,10 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 syncthing/syncthing:latest
 --platform=linux/arm64 syncthing/syncthing:latest
+
+
+--platform=linux/amd64 docker.io/library/postgres:18
+--platform=linux/arm64 docker.io/library/postgres:18
+
+--platform=linux/amd64 ghcr.io/paperless-ngx/paperless-ngx:latest
+--platform=linux/arm64 ghcr.io/paperless-ngx/paperless-ngx:latest
