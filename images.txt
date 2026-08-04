@@ -92,3 +92,8 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 ghcr.io/paperless-ngx/paperless-ngx:latest
 --platform=linux/arm64 ghcr.io/paperless-ngx/paperless-ngx:latest
+
+--platform=linux/amd64 stirlingtools/stirling-pdf:latest
+--platform=linux/arm64 stirlingtools/stirling-pdf:latest
+
+
