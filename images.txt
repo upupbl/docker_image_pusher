@@ -95,3 +95,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 stirlingtools/stirling-pdf
 --platform=linux/arm64 stirlingtools/stirling-pdf
+
+--platform=linux/amd64 duplicati/duplicati:latest
+--platform=linux/arm64 duplicati/duplicati:latest
