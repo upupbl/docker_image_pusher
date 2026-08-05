@@ -104,3 +104,11 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 drakkan/sftpgo:v2.7.5
 --platform=linux/arm64 drakkan/sftpgo:v2.7.5
+
+# Homepage
+--platform=linux/amd64 ghcr.io/gethomepage/homepage:latest
+--platform=linux/arm64 ghcr.io/gethomepage/homepage:latest
+
+# Docker Socket Proxy，显示容器状态时使用
+--platform=linux/amd64 ghcr.io/tecnativa/docker-socket-proxy:latest
+--platform=linux/arm64 ghcr.io/tecnativa/docker-socket-proxy:latest
