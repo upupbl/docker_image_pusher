@@ -98,3 +98,7 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 duplicati/duplicati:latest
 --platform=linux/arm64 duplicati/duplicati:latest
+
+--platform=linux/amd64 louislam/uptime-kuma:2
+--platform=linux/arm64 louislam/uptime-kuma:2
+
