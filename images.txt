@@ -118,3 +118,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 ghcr.io/advplyr/audiobookshelf:latest
 --platform=linux/arm64 ghcr.io/advplyr/audiobookshelf:latest
+
+--platform=linux/amd64 lscr.io/linuxserver/kavita:latest
+--platform=linux/arm64 lscr.io/linuxserver/kavita:latest
