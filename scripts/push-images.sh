@@ -5,6 +5,7 @@ set -Eeuo pipefail
 readonly IMAGES_FILE="${IMAGES_FILE:-images.txt}"
 readonly MAX_ATTEMPTS="${MAX_ATTEMPTS:-3}"
 readonly RETRY_DELAY_SECONDS="${RETRY_DELAY_SECONDS:-10}"
+readonly DEFERRED_RETRY_DELAY_SECONDS="${DEFERRED_RETRY_DELAY_SECONDS:-60}"
 readonly SUMMARY_FILE="${GITHUB_STEP_SUMMARY:-/dev/null}"
 
 task_tmp="$(mktemp -d)"
@@ -304,11 +305,37 @@ printf '%s' "$ALIYUN_REGISTRY_PASSWORD" \
 
 successes=()
 failures=()
+deferred_entries=()
 
-for entry in "${worklist_entries[@]}"; do
+record_or_defer_failure() {
+  local reason="$1"
+  local entry="$2"
+  local platform="$3"
+  local image="$4"
+  local target_image="$5"
+  local defer_failure="$6"
+
+  if [[ "$defer_failure" == "true" ]]; then
+    echo "Deferring failed image until the end of the run: $image"
+    deferred_entries+=("$entry")
+  else
+    failures+=("$reason|$platform|$image|$target_image")
+  fi
+}
+
+mirror_entry() {
+  local entry="$1"
+  local defer_failure="$2"
+  local platform
+  local image
+  local platform_prefix
+  local namespace_prefix
+  local target_image
+  local -a pull_command
+
   if ! parse_entry "$entry"; then
     failures+=("Invalid entry||$entry|")
-    continue
+    return 0
   fi
 
   platform="$PARSED_PLATFORM"
@@ -338,25 +365,42 @@ for entry in "${worklist_entries[@]}"; do
   echo "Target:   $target_image"
 
   if ! retry "${pull_command[@]}"; then
-    failures+=("Pull failed|$platform|$image|$target_image")
-    continue
+    record_or_defer_failure "Pull failed" "$entry" "$platform" "$image" "$target_image" "$defer_failure"
+    docker image prune --force >/dev/null 2>&1 || true
+    return 0
   fi
 
   if ! docker tag "$image" "$target_image"; then
-    failures+=("Tag failed|$platform|$image|$target_image")
+    record_or_defer_failure "Tag failed" "$entry" "$platform" "$image" "$target_image" "$defer_failure"
     docker image rm "$image" >/dev/null 2>&1 || true
-    continue
+    return 0
   fi
 
   if ! retry docker push "$target_image"; then
-    failures+=("Push failed|$platform|$image|$target_image")
+    record_or_defer_failure "Push failed" "$entry" "$platform" "$image" "$target_image" "$defer_failure"
   else
     successes+=("$platform|$image|$target_image")
   fi
 
   docker image rm "$image" "$target_image" >/dev/null 2>&1 || true
   docker image prune --force >/dev/null 2>&1 || true
+}
+
+for entry in "${worklist_entries[@]}"; do
+  mirror_entry "$entry" true
 done
+
+if ((${#deferred_entries[@]} > 0)); then
+  echo "=============================================================================="
+  echo "Retrying ${#deferred_entries[@]} deferred image(s) after ${DEFERRED_RETRY_DELAY_SECONDS}s."
+  sleep "$DEFERRED_RETRY_DELAY_SECONDS"
+  first_pass_failures=("${deferred_entries[@]}")
+  deferred_entries=()
+
+  for entry in "${first_pass_failures[@]}"; do
+    mirror_entry "$entry" false
+  done
+fi
 
 write_result_table
 
