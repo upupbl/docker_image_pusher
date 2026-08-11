@@ -15,9 +15,6 @@ linuxserver/qbittorrent:5.1.0
 --platform=linux/amd64 easychen/cookiecloud
 --platform=linux/arm64 easychen/cookiecloud
 
---platform=linux/amd64 cloudnas/clouddrive2
---platform=linux/arm64 cloudnas/clouddrive2
-
 --platform=linux/amd64 taygetus/npc
 --platform=linux/arm64 taygetus/npc
 
