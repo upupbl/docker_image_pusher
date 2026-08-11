@@ -121,3 +121,6 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 lscr.io/linuxserver/kavita:latest
 --platform=linux/arm64 lscr.io/linuxserver/kavita:latest
+
+--platform=linux/amd64 vaultwarden/server:latest
+--platform=linux/arm64 vaultwarden/server:latest
