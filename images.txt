@@ -54,4 +54,3 @@ linuxserver/qbittorrent:5.1.0
 
 --platform=linux/amd64 deluan/navidrome:latest
 --platform=linux/arm64 deluan/navidrome:latest
-
